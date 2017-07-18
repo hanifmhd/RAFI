@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MapsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="10dp"
+        android:background="@color/white">
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal|top" />
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mainView"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:background="@color/grey"
+            android:padding="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_below="@+id/map"
+            android:fitsSystemWindows="true">
+
+            <TextView
+                android:id="@+id/txt_nama_aoc"
+                android:textColor="@color/font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:textColor="@color/font"
+                android:layout_marginTop="12dp"
+                android:id="@+id/textBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_nama_aoc"
+                android:text="BRANCH"/>
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/tv_branch"
+                android:textColor="@color/font"
+                android:layout_toRightOf="@+id/textBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_nama_aoc"
+                />
+            <TextView
+                android:textColor="@color/font"
+                android:id="@+id/textsales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textBranch"
+                android:text="SALES"/>
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/tv_sales"
+                android:layout_below="@+id/textBranch"
+                android:layout_toRightOf="@+id/textBranch"
+                android:layout_width="wrap_content"
+                android:textColor="@color/font"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:textColor="@color/font"
+                android:id="@+id/texttarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textsales"
+                android:text="TARGET"/>
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/tv_target"
+                android:layout_below="@+id/tv_sales"
+                android:layout_toRightOf="@+id/textBranch"
+                android:layout_width="wrap_content"
+                android:textColor="@color/font"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:textColor="@color/font"
+                android:id="@+id/textlastupdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/texttarget"
+                android:text="LAST UPDATE"/>
+
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/tv_lastupdate"
+                android:layout_below="@+id/tv_target"
+                android:layout_toRightOf="@+id/textlastupdate"
+                android:layout_width="wrap_content"
+                android:textColor="@color/font"
+                android:layout_height="wrap_content"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_achievement"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:textSize="24sp"
+                android:textColor="@color/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageView
+                android:id="@+id/statistic"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/txt_achievement"
+                android:src="@drawable/trending"/>
+            <Button
+                android:id="@+id/btn_detail"
+                android:background="@color/green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:textSize="12sp"
+                android:layout_above="@+id/statistic"
+                android:layout_alignEnd="@+id/txt_achievement" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+
